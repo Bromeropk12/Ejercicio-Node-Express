@@ -14,13 +14,5 @@
     "edad": 25,
     "email": "bromero12@sanf.co",
     "telefono": "3134750712"
-  },
-  {
-    "id": "SQU7QMTL",
-    "nombre": "Juan",
-    "apellido": "Pérez Actualizado",
-    "edad": 32,
-    "email": "juan@example.com",
-    "telefono": "3004457896"
   }
 ]
