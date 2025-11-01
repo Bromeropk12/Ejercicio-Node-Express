@@ -1,0 +1,26 @@
+[
+  {
+    "id": "SX3VUYJQ",
+    "nombre": "Test",
+    "apellido": "User",
+    "edad": 25,
+    "email": "test@example.com",
+    "telefono": "123456789"
+  },
+  {
+    "id": "JN41FPAS",
+    "nombre": "Briann",
+    "apellido": "Romero",
+    "edad": 25,
+    "email": "bromero12@sanf.co",
+    "telefono": "3134750712"
+  },
+  {
+    "id": "SQU7QMTL",
+    "nombre": "Juan",
+    "apellido": "Pérez Actualizado",
+    "edad": 32,
+    "email": "juan@example.com",
+    "telefono": "3004457896"
+  }
+]
