@@ -235,7 +235,7 @@ export class UserController {
         `;
         res.send(html);
       } else {
-        // API response para requests que no son del navegador
+        
         const response: ApiResponse<Usuario[]> = {
           success: true,
           data: users,
@@ -248,7 +248,7 @@ export class UserController {
     }
   }
 
-  // GET /users/:id - Obtener usuario por ID
+  
   getUserById(req: Request, res: Response): void {
     try {
       const id = req.params.id;
@@ -256,7 +256,7 @@ export class UserController {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
 
-      // Validar formato del ID (debe ser string alfanumérico)
+      
       if (!/^[A-Z0-9]+$/.test(id)) {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
@@ -277,12 +277,12 @@ export class UserController {
     }
   }
 
-  // POST /users - Crear nuevo usuario
+  //
   createUser(req: Request, res: Response): void {
     try {
       const userData: CreateUsuarioRequest = req.body;
 
-      // Validar datos
+      
       const validationErrors = userService.validateUserData(userData);
       if (validationErrors.length > 0) {
         return this.sendErrorResponse(res, 'VALIDATION_ERROR', 'Datos de usuario inválidos', validationErrors, 400);
@@ -300,7 +300,7 @@ export class UserController {
     }
   }
 
-  // PUT /users/:id - Actualizar usuario completamente
+  
   updateUser(req: Request, res: Response): void {
     try {
       const id = req.params.id;
@@ -308,14 +308,14 @@ export class UserController {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
 
-      // Validar formato del ID (debe ser string alfanumérico)
+      
       if (!/^[A-Z0-9]+$/.test(id)) {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
 
       const userData: CreateUsuarioRequest = req.body;
 
-      // Validar datos
+     
       const validationErrors = userService.validateUserData(userData);
       if (validationErrors.length > 0) {
         return this.sendErrorResponse(res, 'VALIDATION_ERROR', 'Datos de usuario inválidos', validationErrors, 400);
@@ -337,7 +337,7 @@ export class UserController {
     }
   }
 
-  // PATCH /users/:id - Actualizar usuario parcialmente
+ 
   partialUpdateUser(req: Request, res: Response): void {
     try {
       const id = req.params.id;
@@ -345,19 +345,19 @@ export class UserController {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
 
-      // Validar formato del ID (debe ser string alfanumérico)
+     
       if (!/^[A-Z0-9]+$/.test(id)) {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
 
       const userData: UpdateUsuarioRequest = req.body;
 
-      // Validar que al menos un campo esté presente
+      
       if (Object.keys(userData).length === 0) {
         return this.sendErrorResponse(res, 'VALIDATION_ERROR', 'Debe proporcionar al menos un campo para actualizar', null, 400);
       }
 
-      // Validar datos proporcionados
+     
       const validationErrors = userService.validateUserData(userData);
       if (validationErrors.length > 0) {
         return this.sendErrorResponse(res, 'VALIDATION_ERROR', 'Datos de usuario inválidos', validationErrors, 400);
@@ -379,7 +379,7 @@ export class UserController {
     }
   }
 
-  // DELETE /users/:id - Eliminar usuario
+ 
   deleteUser(req: Request, res: Response): void {
     try {
       const id = req.params.id;
@@ -387,7 +387,7 @@ export class UserController {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
 
-      // Validar formato del ID (debe ser string alfanumérico)
+      
       if (!/^[A-Z0-9]+$/.test(id)) {
         return this.sendErrorResponse(res, 'INVALID_ID', 'ID de usuario inválido', null, 400);
       }
@@ -408,7 +408,7 @@ export class UserController {
     }
   }
 
-  // Método helper para enviar respuestas de error consistentes
+ 
   private sendErrorResponse(
     res: Response,
     code: string,
