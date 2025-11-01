@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "477109e5-f943-4d45-acea-8b440973888d",
+		"name": "API Gestión de Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "49724903",
+		"_collection_link": "https://bromero12-7443214.postman.co/workspace/BRIANN-SNEYDER-ROMERO-ROMERO's-~ac303134-27a6-45d4-86dd-95cf57e8ac78/collection/49724903-477109e5-f943-4d45-acea-8b440973888d?action=share&source=collection_link&creator=49724903"
+	},
+	"item": [
+		{
+			"name": "Obtener Todos los Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuario por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/users/JN41FPAS"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Nuevo Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Pérez\",\r\n  \"edad\": 30,\r\n  \"email\": \"juan.perez@example.com\",\r\n  \"telefono\": \"3001234567\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Usuario Completo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Juan Carlos\",\r\n  \"apellido\": \"Pérez González\",\r\n  \"edad\": 31,\r\n  \"email\": \"juancarlos.perez@example.com\",\r\n  \"telefono\": \"3001234568\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/users/02X7HG9H"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Usuario Parcial",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"telefono\": \"66666666666\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/users/02X7HG9H"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/users/02X7HG9H"
+			},
+			"response": []
+		}
+	]
+}
