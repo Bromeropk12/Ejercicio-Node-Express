@@ -236,7 +236,11 @@ Este proyecto está bajo la Licencia ISC.
 ## 👥 Autor
 
 Proyecto desarrollado como ejercicio académico de Node.js + TypeScript.
-por: Briann Sneyder Romero
+por: 
+Briann Romero
+Juan Sarria 
+Nicolas Moreno
+Felipe Useche
 
 ---
 
